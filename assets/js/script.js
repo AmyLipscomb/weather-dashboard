@@ -2,7 +2,6 @@
 var requestUrl = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={e97808d5796e4a020875da81441691e5}"
 
 var url = `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${apiKey}` //<-Template literate
-//^Receive error message in console. Ask Sara why that is? Why am I receiving a 404 error?
 //^Received this from the OpenWeather email
 var apiKey = "e97808d5796e4a020875da81441691e5"
 
@@ -44,6 +43,7 @@ function displayCurrentweather(data){
     var cardBody = document.createElement("div")
     cardBody.setAttribute("class","card-body")
     var cardTitle = document.createElement("h5")
+    cardTitle.textContent = userInput.value //Had to create this so that the name of the city would appear after the city was searched for. 
     cardTitle.setAttribute("class","card-title")
     var temp = document.createElement("p")
     temp.setAttribute("class","card-text")
@@ -80,6 +80,8 @@ searchBtn.addEventListener("click",(e)=>{
     getWeather(city) //Calling the function and feeding it the city name
 
 })
+
+//Local Storage
 
 
 
