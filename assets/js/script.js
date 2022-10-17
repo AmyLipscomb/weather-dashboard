@@ -77,16 +77,28 @@ searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
     //The 'e' stands for 'event'
     var city = userInput.value
-    // var txt=$(this).siblings(".form-control").val() <--Look into this. 
+
+    
+    // var txt=$(this).siblings(".form-control").val() //<--Look into this. 
     console.log(city);
     getWeather(city) //Calling the function and feeding it the city name
 
-    // localStorage.setItem(city,txt); <--Look into this.
+    // Local storage
+        // First, get the previous value of the "searchedCities" local storage
+    var storedCities = JSON.parse(localStorage.getItem("searchedCities"))
+        // If storedCities is empty, we need to make it into an empty array
+    if (!storedCities) {
+        storedCities = []
+    }
+        // Add our new city to that list
+        storedCities.push(city)
+        // Save the new list in local storage searchedCities
+    localStorage.setItem("searchedCities", JSON.stringify(storedCities)); //<--Look into this.
 })
 
 //Local Storage
 
-// $("#userInput .form-control").val(localStorage.getItem("userInput")); <--Look into this.
+// $("#userInput .form-control").val(localStorage.getItem("userInput")); //<--Look into this.
 
 
 
