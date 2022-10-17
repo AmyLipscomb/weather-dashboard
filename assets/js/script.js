@@ -75,14 +75,18 @@ function displayCurrentweather(data){
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
+    //The 'e' stands for 'event'
     var city = userInput.value
+    // var txt=$(this).siblings(".form-control").val() <--Look into this. 
     console.log(city);
     getWeather(city) //Calling the function and feeding it the city name
 
+    // localStorage.setItem(city,txt); <--Look into this.
 })
 
 //Local Storage
 
+// $("#userInput .form-control").val(localStorage.getItem("userInput")); <--Look into this.
 
 
 
