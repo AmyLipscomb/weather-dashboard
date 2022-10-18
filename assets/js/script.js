@@ -72,18 +72,18 @@ function displayCurrentweather(data){
 }
 
 
-// 1. Retrieve the list of the cities from local storage. 
-var cityList = JSON.parse(localStorage.getItem("searchedCities"));
+// // 1. Retrieve the list of the cities from local storage. 
+// var cityList = JSON.parse(localStorage.getItem("searchedCities"));
 
-// 2. Loop over the list and create an element for each. 
-for (var i=0; i < cityList.length; i++){
-  // console.log(data[i]);
-  const cityBtn = document.createElement("button")
-  cityBtn.textContent=cityList[i];
+// // 2. Loop over the list and create an element for each. 
+// for (var i=0; i < cityList.length; i++){
+//   // console.log(data[i]);
+//   const cityBtn = document.createElement("button")
+//   cityBtn.textContent=cityList[i];
 
-    //Append
-    searchHistory.append(cityBtn);
-}
+//     //Append
+//     searchHistory.append(cityBtn);
+// }
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -97,15 +97,15 @@ searchBtn.addEventListener("click",(e)=>{
 
     // Local storage
         // First, get the previous value of the "searchedCities" local storage
-    var storedCities = JSON.parse(localStorage.getItem("searchedCities"))
+    // var storedCities = JSON.parse(localStorage.getItem("searchedCities"))
         // If storedCities is empty, we need to make it into an empty array
-    if (!storedCities) {
-        storedCities = []
-    }
+    // if (!storedCities) {
+    //     storedCities = []
+    // }
         // Add our new city to that list
-        storedCities.push(city)
+        // storedCities.push(city)
         // Save the new list in local storage searchedCities
-    localStorage.setItem("searchedCities", JSON.stringify(storedCities)); //<--Look into this.
+    // localStorage.setItem("searchedCities", JSON.stringify(storedCities)); //<--Look into this.
 
         //To save the searched data, so that when the site refreshes it keeps everything.
         
