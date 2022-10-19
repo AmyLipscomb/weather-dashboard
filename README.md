@@ -12,7 +12,7 @@ Welcome! Everybody's got a daily routine, and I'm sure a task from that routine 
 
 <strong>My Task</strong>
 
-I utilized HTML, CSS, JavaScript and Bootstrap. Bootstrap is a free coding library that allows its users to create websites, utilizing premade bits of code written in HTML, CSS or JavaScript. In order to use this library, I had to first link in the website via index.html. The placement is crucial, because in order for my personalized style.css to be applied, the Bootstrap link had to be placed before, the linking of my style.css. Below is a screenshot: 
+I utilized HTML, CSS, JavaScript and Bootstrap. Bootstrap is a free coding library that allows its users to create websites, utilizing premade bits of code written in HTML, CSS or JavaScript. In order to use this library, I had to first link in the website via index.html. The placement is crucial, because in order for my personalized style.css to be applied, the Bootstrap link had to be placed before the linking of my style.css. Below is a screenshot: 
 
 ![Index-Link](./assets/images/index.html-screenshot.png)
 
